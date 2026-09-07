@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Soporte_tegnico</title>
+</head>
+
+<body>
+    <h1>Mesa de Ayuda - Soporte Técnico</h1>
+
+<form action="index.html" method="post">
+
+    <fieldset>
+        <legend>Datos Solicitante</legend>
+        <label for="documento">Nombre Completo: </label>
+        <input type="text" id="documento" name="documento" minlength="3" required/>
+        
+        <label for="correo">Correo Institucional: </label>
+        <input type="email" id="correo" name="correo" required/>
+
+
+        <label for="equipo">Sede / Ubicación: </label>
+        <select id="equipo" name="equipo" required>
+            <option value="">Seleccione la ubicación...</option>
+            <option value="funza">Funza</option>
+            <option value="mosquera">Mosquera</option>
+            <option value="facatativa">Facatativá</option>
+            <option value="madrid">Madrid</option>
+            <option value="villeta">Villeta</option>
+        </select>
+    </fieldset>
+
+    <fieldset>
+        <legend>Detalles del Requerimiento</legend>
+        <label>Tipo de Falla: </label>
+        <input type="radio" id="falla" name="jornada" value="falla" required/>
+        <label for="falla" class="label-inline">Falla de Hardware / Daño Físico</label>
+
+        <input type="radio" id="software" name="jornada" value="software" required/>
+        <label for="software" class="label-inline">Falla de Software / Actualización</label>
+
+        <br><br>
+        <label>
+            <input type="checkbox" id="terminos" name="terminos" required/>
+            Marcar como Prioridad ALTA
+        </label>
+        <br><br>
+        <button type="submit">Generar ticket de Soporte</button>
+    </fieldset>
+</form>
+        <h2>Ticket Recientes</h2>
+            <table border="1" class="tabla-registros">
+                <tr>
+                    <th>Ticket ID</th>
+                    <th>Sede</th>
+                    <th>Tipo</th>
+                    <th>Estado</th>
+                </tr>
+                <tr>
+                    <td>#TK-1045</td>
+                    <td>Mosquera</td>
+                    <td>Software</td>
+                    <td>En Revisión</td>
+                </tr>
+                <tr>
+                    <td>#TK-1046</td>
+                    <td>Facatativá</td>
+                    <td>Hardware</td>
+                    <td>Pendiente Piezas</td>
+                </tr>
+                <tr>
+                    <td>#TK-1047</td>
+                    <td>Soacha</td>
+                    <td>Hardware</td>
+                    <td>Solucionado</td>
+                </tr>
+            </table>
+
+
+    </form>
+</body>
+</html>
